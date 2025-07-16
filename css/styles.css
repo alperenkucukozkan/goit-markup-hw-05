@@ -336,7 +336,7 @@ img {
   width: 100%;
   height: 100%;
   transform: translateY(100%);
-  transition: transform 250ms ease-in-out;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   padding: 8px;
   background-color: #4d5ae5;
   color: #fff;
@@ -364,11 +364,11 @@ img {
 }
 .social-links .link:hover {
   background-color: #404bbf;
-  transition: background-color 0.3s;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .social-links .link:hover .icon {
   fill: #f4f4fd;
-  transition: fill 0.3s;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .social-links .footer-links {
   display: flex;
@@ -379,7 +379,7 @@ img {
 }
 .social-links .footer-links .link:hover {
   background-color: #31d0aa;
-  transition: background-color 0.3s;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-label {
@@ -404,7 +404,7 @@ img {
   background: rgba(0, 0, 0, 0.5);
   visibility: hidden;
   opacity: 0;
-  transition: opacity 0.3s;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal:target {
   visibility: visible;
@@ -424,10 +424,32 @@ img {
   color: #2e2f42;
 }
 
+.modal-content p {
+  margin-top: 48px;
+  margin-bottom: 12px;
+}
 .close-btn {
   position: absolute;
   right: 24px;
   top: 29px;
+}
+.modal-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  color: #2e2f42;
+  background-color: #e7e9fc;
+}
+.close-btn:hover .modal-icon {
+  background-color: #404bbf;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.close-btn:hover .modal-icon .m-icon {
+  fill: white;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .form {
   display: flex;
@@ -440,32 +462,35 @@ img {
   position: relative;
   display: flex;
   flex-direction: column;
-  transition: color 150ms ease-in-out;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   justify-content: flex-end;
-  margin-top: 8px;
+  margin-bottom: 8px;
 }
 
 .form-input {
   padding: 8px 0 8px 38px;
+  border: 1px solid #2e2f4266;
+  border-radius: 4px;
+}
+.input-icon:focus {
+  fill: red;
+}
+.form-input:focus {
+  border-color: blue;
 }
 .textarea {
-  padding: 12px 16px;
+  width: 360px;
+  height: 120px;
+  resize: none;
+  padding: 8px 16px;
   font-size: 12px;
+  border: 1px solid #2e2f4266;
+  border-radius: 4px;
+  margin-bottom: 12px;
 }
 .form .button {
   align-self: center;
   justify-content: center;
-}
-
-.modal-icon {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 24px;
-  height: 24px;
-  border-radius: 50%;
-  color: #2e2f42;
-  background-color: #e7e9fc;
 }
 
 .input-icon {
@@ -479,7 +504,6 @@ img {
   pointer-events: none;
 }
 .last-label {
-  padding-top: 20px;
   font-size: 13px;
 }
 .send-button {
@@ -495,7 +519,7 @@ img {
   letter-spacing: 0.04em;
   cursor: pointer;
   color: white;
-  margin-top: 20px;
+  margin-top: 24px;
 }
 .policy {
   text-decoration: underline;
