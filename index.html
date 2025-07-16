@@ -556,18 +556,31 @@
             </div>
           </ul>
         </div>
-      </div>
-      <div class="trird">
-        <a href="#modal" class="open-btn">Subscribe</a>
 
+        <div class="third">
+          <label class="footer-label">
+            Subscribe
+            <input type="email" class="footer-input" placeholder="E-mail" />
+          </label>
+        </div>
+        <div class="fourth">
+          <a href="#modal" class="open-btn"
+            >Subscribe
+            <svg class="icon" width="16" height="16">
+              <use xlink:href="images/icons.svg#icon-Frame-3"></use>
+            </svg>
+          </a>
+        </div>
         <div id="modal" class="modal">
           <div class="modal-content">
-            <a href="#">
-              <svg class="modal-icon" width="8" height="8">
-                <use xlink:href="images/icons.svg#icon-close"></use>
-              </svg>
-            </a>
-            <p>Leave your contacts and we will call you back</p>
+            <div>
+              <a href="#" class="close-btn">
+                <svg class="modal-icon" width="8" height="8">
+                  <use xlink:href="images/icons.svg#icon-close"></use>
+                </svg>
+              </a>
+              <p>Leave your contacts and we will call you back</p>
+            </div>
             <form class="form">
               <div class="form-div">
                 <label class="form-label">
@@ -595,8 +608,9 @@
                   Comment
                   <textarea
                     name="Comment"
+                    class="textarea"
                     placeholder="Text input"
-                    rows="7"
+                    rows="9"
                   ></textarea>
                 </label>
                 <label class="last-label">
