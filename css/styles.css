@@ -400,7 +400,9 @@ img {
 }
 .modal {
   position: fixed;
-  padding-top: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   inset: 0;
   background: rgba(46, 47, 66, 0.4);
   visibility: hidden;
@@ -423,6 +425,7 @@ img {
   border-radius: 4px;
   position: relative;
   color: #2e2f42;
+  font-weight: medium;
 }
 
 .modal-content p {
